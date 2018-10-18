@@ -1,0 +1,38 @@
+[iter-var-names]
+i j
+x y
+a b
+
+# [orderbook-sides]
+# bid ask
+# sell buy
+
+[open-close]
+acquire release
+lock unlock
+open close
+connect disconnect
+enter exit
+start stop
+alloc free
+
+[io]
+in out
+stdin stdout
+read write
+receive send
+load save
+restore backup
+download upload
+get put
+
+[incdec]
+increment decrement
+add subtract               # TODO: How is 'subtract' not in walks?
+
+[ast-insertion]
+set add
+list append
+str append
+map put
+map update

@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "javasrcminer.App"
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories { mavenCentral() }
+
+run {
+    args System.getProperty("exec.args", "").split() 
+}
+
+dependencies {
+    compile 'com.github.javaparser:javaparser-core:3.5.6'
+    compile group: 'com.beust', name: 'jcommander', version: '1.72'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    compile group: 'org.apache.commons', name: 'commons-compress', version: '1.17'
+    compile group: 'com.ibm.wala', name: 'com.ibm.wala.core', version: '1.4.3'
+    compile group: 'com.ibm.wala', name: 'com.ibm.wala.cast', version: '1.4.3'
+    compile group: 'com.ibm.wala', name: 'com.ibm.wala.cast.java', version: '1.4.3'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+}
+

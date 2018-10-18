@@ -1,0 +1,8 @@
+alloc allocate
+dealloc deallocate
+recv receive
+init initialize
+deinit deinitialize
+
+[abbreviations]
+address addr
